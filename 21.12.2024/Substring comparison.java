@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Solution {
 
     public static String getSmallestAndLargest(String s, int k) {
-        String smallest = s.substring(0, k); // Start by assuming the first substring is the smallest
+        String smallest = s.substring(0, k);
         String largest = s.substring(0, k);
         
         // Complete the function
@@ -12,8 +12,6 @@ public class Solution {
         // Loop through the string to get all substrings of length k
         for (int i = 1; i <= s.length() - k; i++) {
             String substring = s.substring(i, i + k);
-            
-            // Update smallest and largest if necessary
             if (substring.compareTo(smallest) < 0) {
                 smallest = substring;
             }
